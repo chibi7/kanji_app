@@ -1,0 +1,15 @@
+%html{:lang => "pl"}
+  %head
+    %title KanjiApp
+    %meta{:charset => "utf-8"}/
+
+    = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
+    = csrf_meta_tags
+
+  %body{'data-no-turbolink' => true}
+    .container
+      = render partial: "common/header"
+      .wrapper
+        = yield
+
+    = javascript_include_tag "application", "data-turbolinks-track" => true

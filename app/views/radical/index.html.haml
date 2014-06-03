@@ -1,0 +1,29 @@
+%div.wrap
+  %h1 LISTA RADYKAŁÓW
+  %div#frame.effects
+    %ul.slidee
+      - @radicals.each do |radical|
+        %li.radical 
+          %div.sign
+            %span{:class => 'hint--bottom', 'data-hint' => 'Wygląd znaku'}
+              = radical.sign[0]
+          %div.sign_helper
+            %span{:class => 'hint--bottom', 'data-hint' => 'Wygląd znaku w złożeniach'}
+              = radical.sign[1..-1]
+          %div.meaning
+            %span{:class => 'hint--bottom', 'data-hint' => 'Znaczenie'}
+              = radical.meaning
+          %div.reading
+            %span{:class => 'hint--bottom', 'data-hint' => 'Czytanie'}
+              = radical.reading
+          %div.hiragana
+            %span{:class => 'hint--bottom', 'data-hint' => 'Zapis w hiraganie'}
+              = radical.hiragana
+          %div.strokes
+            %span{:class => 'hint--top', 'data-hint' => 'Ilość kresek'}
+              = radical.strokes
+  %div.scrollbar
+    %div.handle
+      %div.mousearea
+  %div.instructions
+    %p Do sterowania możesz używać: myszy, klawiatury oraz suwaka.

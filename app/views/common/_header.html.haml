@@ -1,0 +1,11 @@
+%header.header
+  %div.wrapper.clearfix
+    %h1
+      %a{href: root_path}
+    %nav
+      %ul.flip-nav
+        %li=link_to 'GŁÓWNA', home_index_path, class: class_if_current_page(home_index_path, :active)
+        %li=link_to 'RADICALS', radical_index_path, class: class_if_current_page(radical_index_path, :active)
+        %li=link_to 'KANJI', kanji_index_path, class: class_if_current_page(kanji_index_path, :active)
+        %li=link_to 'KONTAKT', contact_index_path, class: class_if_current_page(contact_index_path, :active)
+%div.header-fake

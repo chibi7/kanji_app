@@ -1,0 +1,106 @@
+@import reset
+@import variables
+
+
+*
+    margin: 0px
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+    box-sizing: border-box
+
+// FIX FOR FIREFOX BLURRY ICONS
+
+[class^="icon-"],
+[class*=" icon-"]
+    -moz-osx-font-smoothing: grayscale
+
+html, body
+    height: 100%
+
+body
+    background-color: silver
+    background-image: radial-gradient(circle at 100% 150%, silver 24%, white 25%, white 28%, silver 29%, silver 36%, white 36%, white 40%, transparent 20%, transparent), radial-gradient(circle at 0 150%, silver 24%, white 25%, white 28%, silver 29%, silver 36%, white 36%, white 40%, transparent 20%, transparent), radial-gradient(circle at 50%  100%, white 10%, silver 11%, silver 23%, white 24%, white 30%, silver 31%, silver 43%, white 44%, white 50%, silver 51%, silver 63%, white 64%, white 71%, transparent 35%, transparent), radial-gradient(circle at 100% 50%, white 5%, silver 6%, silver 15%, white 16%, white 20%, silver 21%, silver 30%, white 31%, white 35%, silver 36%, silver 45%, white 46%, white 49%, transparent 25%, transparent), radial-gradient(circle at 0    50%, white 5%, silver 6%, silver 15%, white 16%, white 20%, silver 21%, silver 30%, white 31%, white 35%, silver 36%, silver 45%, white 46%, white 49%, transparent 25%, transparent)
+    background-size: 100px 50px
+
+strong
+    font-weight: 500
+
+.container
+    min-width: $widthFull
+    min-height: 100%
+    height: auto !important
+    height: 100%
+    margin: 0 auto
+    margin-bottom: -($marginBigger * 2 + $lineHeightNormal)
+
+.wrapper
+    width: $widthFull
+    margin: 0 auto
+    .wrap
+        h1
+            padding: 15px 15px
+            font-size: 20px
+            text-align: center
+
+label
+    cursor: default
+
+.mutted
+    color: #909090
+
+.text--right
+    text-align: right
+
+.float--right
+    float: right
+
+.to-checkbox
+    cursor: pointer
+
+
+// -- HEADER --
+.header
+    height: 70px
+    background: $extraLightGrey
+    border-bottom: 1px solid $darkGrey
+    width: 100%
+    position: fixed
+    h1
+        float: left
+        a
+            color: #606060
+            display: block
+            height: 58px
+            min-width: 112px
+            background: image-url("logo.png") no-repeat 0 50%
+            margin-top: 8px
+            font-size: 26px
+            line-height: 50px
+            padding-left: 122px
+            margin-left: 50px
+    nav
+        float: left
+        margin-left: 50px
+        ul
+            margin-top: 20px
+            li
+                float: left
+                font-size: 16px
+                font-weight: $fontWeightBold
+                padding: 0 10px
+                a
+                    color: #606060
+                    text-decoration: none
+                    display: block
+                    padding: 0 5px
+                    line-height: 30px
+                    &:hover
+                        color: #000000
+                    &.active
+                        color: #000000
+                    &.flipped_item
+                        background-color: $black
+                        color: #ffffff
+.header-fake
+    height: 70px
+    width: 100%
