@@ -1,7 +1,9 @@
+# encoding: utf-8
+
 class ContactController < ApplicationController
   def index
-  end
-
-  def create
+    if params["first_name"].present?
+      @message = 'Dziękujemy za kontakt'
+    end
   end
 end

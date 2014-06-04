@@ -1,5 +1,6 @@
 <div class=wrap>
-<form id="ContactInfo" width="400px" title="Skontaktuj się z nami" action="/contact/create" method="post">
+<div class="message">#{@message}</div>
+<form id="ContactInfo" width="400px" title="Skontaktuj się z nami" action="/contact/index" method="get">
 <input type="text" name="first_name" label="Name" require="true" place="Imię" size="30" /> 
 <input type="text" name="last_name" label="Surname" require="true" place="Nazwisko" size="30" style="margin-left:10px;" />
 <input type="text" name="email" validate="email" place="Adres email" size="30" />
@@ -11,6 +12,7 @@
 <input type="radio" name="membership" value="existing" /> Inna sprawa
 <input type="password" name="pword" require="true" label="Password" place="Hasło" />
 <input type="password" name="pwordm" match="pword" label="Password" place="Powtórz hasło" />
+<textarea label="Text" place="Co chcesz nam powiedzieć?" rows="10" cols="50" require="true"></textarea>
 <p></p>
 <input type="checkbox" name="agree" require="true" label="Terms" value="agree" style="margin-left:10px;" /> Zapoznałem się z regulaminem
 <p></p>

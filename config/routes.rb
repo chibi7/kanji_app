@@ -1,8 +1,6 @@
 KanjiApp::Application.routes.draw do
   get "contact/index"
 
-  post "contact/create"
-
   get "kanji/index"
 
   get "radical/index"

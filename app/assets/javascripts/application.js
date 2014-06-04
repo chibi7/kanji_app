@@ -51,10 +51,13 @@ $(function() {
     });
   }());
 
-  $(document).ready(function() { 
+  $(document).ready(function() {
+  $('#ContactInfo').formly({'theme':'Dark'});
+});
 
-  $('#ContactInfo').formly({'theme':'Dark'}, function(e) { 
-    
-    $('.callback').html(e); 
-  });
+  $(document).ready(function() {
+    $('#fullpage').fullpage({
+      navigation: true,
+      navigationTooltips: ['firstSlide', 'secondSlide'],
+    });
 });
