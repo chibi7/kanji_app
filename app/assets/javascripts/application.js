@@ -57,7 +57,6 @@ $(function() {
 
   $(document).ready(function() {
     $('#fullpage').fullpage({
-      navigation: true,
-      navigationTooltips: ['firstSlide', 'secondSlide'],
+      navigation: true
     });
 });

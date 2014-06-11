@@ -23,6 +23,7 @@ end
 gem 'jquery-rails'
 gem 'jquery-easing-rails'
 gem "seedbank"
+gem "sqlite3-ruby"
 
 gem 'pry-rails', :group => :development
 

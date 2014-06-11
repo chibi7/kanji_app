@@ -1,5 +1,24 @@
 %div#fullpage
-  %div.section.c1 Some section 1
-  %div.section.c2 Some section 2
-  %div.section.c3 Some section 3
-  %div.section.c4 Some section 4
+  - @kanjis.each do |kanji|
+    %div.section
+      %div.sign
+        %div.kanji-image
+          =image_tag "/assets/#{kanji.image}"
+        %div.kanji-meaning
+          =kanji.meaning
+      %div.buttons
+        %div
+          %span{:class => 'hint--right', 'data-hint' => "Czytanie: #{kanji.hiragana} - #{kanji.reading}"}
+            =image_tag "/assets/icons/smile.png"
+        %div
+          %span{:class => 'hint--right', 'data-hint' => "Znaczenie: #{kanji.meaning}"}
+            =image_tag "/assets/icons/bulb.png"
+        %div
+          %span{:class => 'hint--right', 'data-hint' => "Radykały: #{kanji.radicals_signs}"}
+            =image_tag "/assets/icons/puzzles.png"
+        %div
+          %span{:class => 'hint--right', 'data-hint' => "Zapamiętanie: #{kanji.story}"}
+            =image_tag "/assets/icons/book.png"
+        %div
+          %span{:class => 'hint--right', 'data-hint' => "Liczba kresek: #{kanji.strokes}"}
+            =image_tag "/assets/icons/pencil.png"

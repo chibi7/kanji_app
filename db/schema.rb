@@ -11,7 +11,23 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140602200254) do
+ActiveRecord::Schema.define(:version => 20140610220130) do
+
+  create_table "kanjis", :force => true do |t|
+    t.string   "meaning"
+    t.string   "image"
+    t.integer  "strokes"
+    t.string   "reading"
+    t.text     "hiragana"
+    t.text     "story"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "kanjis_radicals", :force => true do |t|
+    t.integer "kanji_id",   :null => false
+    t.integer "radical_id", :null => false
+  end
 
   create_table "radicals", :force => true do |t|
     t.text     "sign"
